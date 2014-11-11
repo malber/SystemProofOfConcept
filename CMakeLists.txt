@@ -1,3 +1,5 @@
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set (PROJECT_SRC src/)
 cmake_minimum_required(VERSION 2.8.9)
 project(MyProject)
-add_executable(hello main.cpp)
+add_executable(hello ${PROJECT_SRC}/main.cpp)
