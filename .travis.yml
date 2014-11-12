@@ -5,6 +5,5 @@ compiler:
 
 before_script:
   - mkdir build
-  - cmake .
 
-script: make && ./build/run_me
+script: ./scripts/buildScript.sh
