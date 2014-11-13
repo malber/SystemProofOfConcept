@@ -1,5 +1,5 @@
 set(CMAKE_COMPILER_IS_GNUCC TRUE)
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 2.8.7)
 
 
 # This is the name of the project
