@@ -1,10 +1,13 @@
 language: cpp
-
 compiler:
-  - gcc
-
-before_script: 
- - ./scripts/setup-travis.sh
- - ./scripts/buildScript.sh
+- gcc
+before_script:
+- "./scripts/setup-travis.sh"
+- "./scripts/buildScript.sh"
 script:
- - ./scripts/testRunner.sh 
+- "./scripts/testRunner.sh"
+after_success: "./scripts/update-gh-pages.sh"
+env:
+  global:
+  - secure: VXLJilMxzokg4z/E9DKJIkbM46XIpGB+Jb4qjuqlq9UOW3z+7fEMndDNgz8K+ZUM0EgVcKOAmLnkn+b7reEnXz2w2RUU3LeC6waStZ3wN5wokGHMP8wCyKh0Z/+Jx4PPT1aQ6P7DTMiTZfLrGdq+vOPxZq4slCmRzuGbyfmSon8=
+  - secure: TZV3P9+W0CIwoMW5wJqNSGM5w4yg0Az1EYfviqrEgPUkDRiJnKcE9jq2FcRJNJC+/gETaKEVhaQ/vxC0vIcci77qKfNp2X3qHG/4KSLH8JglOkq+Xz16iJQ370HlJ9tA8DYLn8N5eBN4vkR/pv7dpI+olpRO2foe1ER7v3/VqEg=
