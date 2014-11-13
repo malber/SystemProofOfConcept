@@ -3,5 +3,8 @@ language: cpp
 compiler:
   - gcc
 
-before_script: ./scripts/setup-travis.sh
-script: ./scripts/buildScript.sh
+before_script: 
+	- ./scripts/setup-travis.sh
+	- ./scripts/buildScript.sh
+script:
+	- ./scripts/testRunner.sh 
