@@ -9,13 +9,14 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git config --global user.name "Travis"
 
   # #using token clone gh-pages branch
-  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/malber/SystemProofOfConcept  gh-pages > /dev/null
+  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/malber/SystemProofOfConcept.git  gh-pages > /dev/null
   echo ${GH_TOKEN}
   # #go into diractory and copy data we're interested in to that directory
   # cd gh-pages
 #  cp -Rf lib/* gh-pages
-  echo "A" >> gh-pages/test.txt
 
+  mkdir -p gh-pages/build
+  cp build/* gh-pages/build/
 
 
 
