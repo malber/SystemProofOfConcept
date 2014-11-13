@@ -4,7 +4,7 @@ compiler:
   - gcc
 
 before_script: 
-	- ./scripts/setup-travis.sh
-	- ./scripts/buildScript.sh
+ - ./scripts/setup-travis.sh
+ - ./scripts/buildScript.sh
 script:
-	- ./scripts/testRunner.sh 
+ - ./scripts/testRunner.sh 
